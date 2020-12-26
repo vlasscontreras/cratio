@@ -1,3 +1,10 @@
+:root {
+  --color-primary: #3bcb7c;
+  --color-secondary: #0093ff;
+
+  --font-family-base: 'Khula', sans-serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
