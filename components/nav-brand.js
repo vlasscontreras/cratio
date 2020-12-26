@@ -4,7 +4,7 @@ const NavBrand = () => {
   return (
     <Link href="/">
       <a className="text-xl my-3">
-        Logo
+        <img src="/images/logo.svg" alt="Crat.io" width="150" />
       </a>
     </Link>
   );

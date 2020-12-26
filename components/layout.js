@@ -15,8 +15,8 @@ const Layout = ({ children }) => {
 			<main className="relative max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
 				{children}
 			</main>
-			<footer className="relative max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
-				Footer
+			<footer className="relative max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8 text-center">
+				Copyleft 2020 | Crat.io
 			</footer>
 		</>
 	);

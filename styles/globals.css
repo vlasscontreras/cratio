@@ -1,8 +1,10 @@
 :root {
-  --color-primary: #3bcb7c;
-  --color-secondary: #0093ff;
+  --color-primary: #0093ff;
+  --color-secondary: #3bcb7c;
 
   --font-family-base: 'Khula', sans-serif;
+
+  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 1);
 }
 
 @tailwind base;
@@ -10,6 +12,7 @@
 @tailwind utilities;
 
 body {
-  background-image: radial-gradient(47.66% 38.4% at 52.19% 28.51%, rgb(18, 25, 40) 0%, rgb(8, 11, 18) 100%);
+  background-image: url('/images/pattern.svg'), radial-gradient(47.66% 38.4% at 52.19% 28.51%, rgb(18, 25, 40) 0%, rgb(8, 11, 18) 100%);
+  background-size: cover;
   color: #fff;
 }
