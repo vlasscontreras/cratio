@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+import Navbar from './navbar';
+
 const Layout = ({ children }) => {
 	return (
 		<>
@@ -7,13 +9,13 @@ const Layout = ({ children }) => {
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link href="https://fonts.googleapis.com/css2?family=Khula:wght@400;700&display=swap" rel="stylesheet" />
 			</Head>
-			<header>
-				Header
+			<header className="relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
+				<Navbar />
 			</header>
-			<main>
+			<main className="relative max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
 				{children}
 			</main>
-			<footer>
+			<footer className="relative max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
 				Footer
 			</footer>
 		</>
