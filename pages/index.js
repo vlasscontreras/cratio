@@ -15,9 +15,9 @@ export default function Home() {
             Get it.
           </h1>
           <p className="mb-5">Get ready to start coding your own WordPress theme right away. Just name it, and download.</p>
-          <div className="bg-opacity-10 bg-white flex justify-between rounded-full">
-            <input type="text" placeholder="Name..." className="rounded-l-full bg-opacity-0 pl-4 bg-white min-w-0" />
-            <button className="px-5 py-2.5 bg-primary rounded-full font-bold">Download</button>
+          <div className="bg-opacity-10 focus-within:bg-opacity-20 transition-all bg-white flex justify-between rounded-full">
+            <input type="text" placeholder="Name..." className="rounded-l-full bg-opacity-0 px-4 bg-white min-w-0 flex-grow outline-none" />
+            <button className="px-5 py-2.5 bg-gradient-to-r from-primary to-secondary rounded-full font-bold focus:outline-none transition-opacity opacity-100 hover:opacity-90">Download</button>
           </div>
         </div>
 
