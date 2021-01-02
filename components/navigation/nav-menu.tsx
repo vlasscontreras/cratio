@@ -13,6 +13,7 @@ const NavMenu = () => {
     'transition-all',
     'md:flex',
     'md:-mx-3',
+    'z-10',
     {
       [styles.show]: showMenu,
     }
@@ -33,7 +34,7 @@ const NavMenu = () => {
         <NavLink href="/link-4">Link 4</NavLink>
       </ul>
 
-      <div className={styles.backdrop} onClick={() => setShowMenu(false)}></div>
+      <div className={classNames(styles.backdrop, 'bg-black bg-opacity-60 transition-opacity')} onClick={() => setShowMenu(false)}></div>
     </>
   );
 }
