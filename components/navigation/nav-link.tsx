@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import { HTMLAttributes } from 'react';
-import c from 'classnames';
+import classNames from 'classnames';
 
-interface IProps extends HTMLAttributes<HTMLElement>  {
+interface IProps extends HTMLAttributes<HTMLElement> {
   href: string,
   className?: string,
   children: string,
 }
 
-const NavLink = ({ href, className, children, ...props }: IProps) => {
+const NavLink = ({ href, className, children }: IProps) => {
   const itemClass = [
     className,
     'px-6',
@@ -16,15 +16,15 @@ const NavLink = ({ href, className, children, ...props }: IProps) => {
     'block',
     'md:px-3',
     'md:py-0',
-  ]
+  ];
 
   return (
     <li>
       <Link href={href}>
-        <a className={c(itemClass)} {...props}>{children}</a>
+        <a className={classNames(itemClass)}>{children}</a>
       </Link>
     </li>
   );
-}
+};
 
 export default NavLink;

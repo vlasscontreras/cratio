@@ -1,0 +1,24 @@
+.navToggler {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+}
+
+.navToggler span,
+.navToggler span::before,
+.navToggler span::after {
+  background-color: #fff;
+  content: '';
+  height: 2px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.navToggler span::before {
+  top: -0.5rem;
+}
+
+.navToggler span::after {
+  bottom: -0.5rem;
+}

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import classNames from 'classnames';
-import styles from '../../styles/nav-menu.module.css';
+import styles from './nav-menu.module.css';
 
 import NavLink from './nav-link';
 import NavToggler from './nav-toggler';
-import ButtonClose from '../button-close';
+import ButtonClose from '../buttons/button-close';
 
 const NavMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -16,8 +16,20 @@ const NavMenu = () => {
     'z-10',
     {
       [styles.show]: showMenu,
-    }
+    },
   );
+  const backdropClass = classNames(
+    styles.backdrop,
+    'bg-black',
+    'bg-opacity-60',
+    'transition-opacity',
+  );
+
+  const onKeyHandler = (event) => {
+    if (event.keyCode === 27) {
+      setShowMenu(false);
+    }
+  };
 
   return (
     <>
@@ -34,9 +46,15 @@ const NavMenu = () => {
         <NavLink href="/link-4">Link 4</NavLink>
       </ul>
 
-      <div className={classNames(styles.backdrop, 'bg-black bg-opacity-60 transition-opacity')} onClick={() => setShowMenu(false)}></div>
+      <div
+        role="banner"
+        aria-hidden="true"
+        className={backdropClass}
+        onClick={() => setShowMenu(false)}
+        onKeyUp={onKeyHandler}
+      />
     </>
   );
-}
+};
 
 export default NavMenu;

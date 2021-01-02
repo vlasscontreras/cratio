@@ -1,38 +1,19 @@
-const NavToggler = ({ className, onClick }) => {
-  return (
-    <>
-      <button className={className} onClick={onClick}>
-        <span></span>
-      </button>
+import { HTMLAttributes } from 'react';
+import classNames from 'classnames';
 
-      <style jsx>{`
-        button {
-          position: relative;
-          height: 2rem;
-          width: 2rem;
-        }
+import styles from './nav-toggler.module.css';
 
-        button span,
-        button span::before,
-        button span::after {
-          background-color: #fff;
-          content: '';
-          height: 2px;
-          left: 0;
-          width: 100%;
-          position: absolute;
-        }
-
-        button span::before {
-          top: -0.5rem;
-        }
-
-        button span::after {
-          bottom: -0.5rem;
-        }
-      `}</style>
-    </>
-  )
+interface IProps extends HTMLAttributes<HTMLElement> {
+  className?: string,
+  onClick?: () => void,
 }
+
+const NavToggler = ({ className, onClick }: IProps) => (
+  <>
+    <button type="button" className={classNames(className, styles.navToggler)} onClick={onClick} aria-label="Toggle menu">
+      <span />
+    </button>
+  </>
+);
 
 export default NavToggler;
